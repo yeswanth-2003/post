@@ -38,7 +38,7 @@ function Post(){
     }
 
     return(
-        <div style={{backgroundColor:'skyblue',padding:'200px 500px ',maxWidth:'1000px',minWidth:'700px' }}>
+        <div style={{backgroundColor:'skyblue',padding:'200px 500px ',minWidth:'700px' }}>
         <div style={{backgroundColor:'white',maxWidth:'600px',minWidth:'300px',border:'1px solid black',borderRadius:'10px',padding:'40px 40px',boxShadow:'0 4px 8px black' }}>
             <h2>LOG IN</h2>
             <form  onSubmit={handlesubmit} >
