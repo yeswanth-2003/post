@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import Axios from 'axios'
 
 function Post(){
 
-    const url="https://reqres.in/api/users/info"
+    // const url="http://localhost:5000/api/register"
     const[form,setForm]=useState({
         name:'',
         email:'',
@@ -12,22 +11,17 @@ function Post(){
     })
 
     const handlechange = (e) =>{
-        console.log('onchange')
         const {name,value} = e.target;
 
-        setForm({
-            ...form,
-            [name]:value
-        })
+        setForm({...form,[name]:value})
     }
 
     const handlesubmit = async (e) =>{
 
         e.preventDefault();
 
-            const response = await fetch('https://reqres.in/api/users/info',{
-                Host: 'reqres.in',
-                method:"post",
+            const response = await fetch('http://localhost:5000/api/register',{
+                method:"Post",
                 body:JSON.stringify(form),
                 headers: {
                     "Content-Type": "application/json"
